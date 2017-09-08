@@ -10,6 +10,14 @@
 		"src": "images/bigIcon.png",
 		"type": "image/png",
 		"sizes": "144x144"
+	}, {
+		"src": "images/3icon.png",
+		"type": "image/png",
+		"sizes": "192x192"
+	}, {
+		"src": "images/4icon.png",
+		"type": "image/png",
+		"sizes": "512x512"
 	}],
 	"background_color": "#2196F3",
 	"display": "standalone",

@@ -26,6 +26,41 @@ this.addEventListener('fetch', function (event) {
     }));
 });
 
+this.addEventListener('push', function(event) {
+    const data = getNotificationData(event.data);
+    event.waitUntil(
+      this.registration.showNotification(data.title, {
+        body: data.body,
+        icon: '/images/icon.png'
+      })
+    );
+});
+
+this.addEventListener('notificationclick', function(event) {
+    event.notification.close();
+});
+
+this.addEventListener('notificationclose', function(event) {
+});
+
+function getNotificationData(data) {
+    if (data) {
+        try {
+            return data.json();
+        } catch(e) {
+            return {
+                title: 'Text',
+                body: data.text()
+            };
+        }
+    } else {
+        return {
+            title: 'Text',
+            body: 'This is a Empty test'
+        };
+    }
+}
+
 // 更新
 // this.addEventListener('activate', function (event) {
 //     const cacheWhilteList = ['v2'];
