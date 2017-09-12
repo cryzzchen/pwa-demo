@@ -66,17 +66,17 @@ window.addEventListener('load', function () {
 
                     // 4. Send a Subscription to Your Server
 
-                    fetch('/api/subscription', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(pushSubscription)
-                    }).then((response) => {
-                        return response.json();
-                    }).then((responseData) => {
+//                     fetch('/api/subscription', {
+//                         method: 'POST',
+//                         headers: {
+//                             'Content-Type': 'application/json'
+//                         },
+//                         body: JSON.stringify(pushSubscription)
+//                     }).then((response) => {
+//                         return response.json();
+//                     }).then((responseData) => {
 
-                    })
+//                     })
                 });
             } else {
                 console.log(JSON.stringify(subscription));
