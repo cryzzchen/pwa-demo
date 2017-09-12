@@ -31,7 +31,7 @@ this.addEventListener('push', function(event) {
     event.waitUntil(
       this.registration.showNotification(data.title, {
         body: data.body,
-        icon: '/images/icon.png'
+        icon: './images/icon.png'
       })
     );
 });
