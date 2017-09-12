@@ -7,7 +7,7 @@ function hasSW () {
 
 function install (scope) {
     if (hasSW()) {
-        return navigator.serviceWorker.register('/sw.js', {scope}).then((reg) => {
+        return navigator.serviceWorker.register('/pwa-demo/sw.js', {scope}).then((reg) => {
             if(reg.installing) {
               console.log('Service worker installing');
             } else if(reg.waiting) {
@@ -46,7 +46,7 @@ function urlBase64ToUint8Array(base64String) {
 
 window.addEventListener('load', function () {
     // 1. register a service worker
-    install('/').then((swRegistration) => {
+    install('/pwa-demo').then((swRegistration) => {
         // 2. request permission
         if (checkPermission() !== 'granted') {  // default,granted,denied
             requestPermission();
