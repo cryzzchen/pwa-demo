@@ -46,7 +46,7 @@ function urlBase64ToUint8Array(base64String) {
 
 window.addEventListener('load', function () {
     // 1. register a service worker
-    install('/pwa-demo').then((swRegistration) => {
+    install('/pwa-demo/').then((swRegistration) => {
         // 2. request permission
         if (checkPermission() !== 'granted') {  // default,granted,denied
             requestPermission();
