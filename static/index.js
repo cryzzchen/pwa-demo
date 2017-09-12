@@ -59,7 +59,7 @@ window.addEventListener('load', function () {
                 swRegistration.pushManager.subscribe({
                     userVisibleOnly: true,
                     applicationServerKey: urlBase64ToUint8Array(
-                        'BAx2Cf-5S79KpoygGLbIalJrNNRtouRay5RxB9Rp4tFWhfnXWOxKDC-Sr-KHKbDyfksDgD-n9dunx8cJadFZ6Ps'
+                        'BChvSXQBTmNA2lwVxTo0Ph2Y2fiHD7JBWq5-gZogPZQqnSPFyim8LOtNUnymAxJmE51zskOLnvdKjqtqJKqf_WU'
                     )
                 }).then((pushSubscription) => {
                     console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
@@ -78,6 +78,8 @@ window.addEventListener('load', function () {
 
                     })
                 });
+            } else {
+                console.log(JSON.stringify(subscription));
             }
         });
     });

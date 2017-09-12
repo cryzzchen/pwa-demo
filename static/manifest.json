@@ -1,7 +1,7 @@
 {
 	"short_name": "Pwa-demo",
 	"name": "A simple pwa demo",
-	"start_url": "/?utm_source=homescreen",
+	"start_url": "/c/?utm_source=homescreen",
 	"icons": [{
 		"src": "images/icon.png",
 		"type": "image/png",
